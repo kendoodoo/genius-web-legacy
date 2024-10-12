@@ -2,9 +2,12 @@
 from flask import Flask, request, redirect
 from lyricsgenius import Genius
 
+token = ""
+if token == "":
+    print('Enter a token first.')
+    exit(1)
 app = Flask(__name__)
 port = 5000
-token = "vzZbuxwkKU0DOF2Mi92iTdQsnvrbAGgNOiT0F6jO9E6XMbellUOD9aA1QOwsga0F"
 g = Genius(token)
 
 # genius handler
